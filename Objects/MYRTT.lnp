@@ -1,0 +1,19 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\thread.o"
+".\objects\kservice.o"
+".\objects\object.o"
+".\objects\scheduler.o"
+".\objects\idle.o"
+".\objects\timer.o"
+".\objects\clock.o"
+".\objects\irq.o"
+".\objects\ipc.o"
+".\objects\cpuport.o"
+".\objects\context_rvde.o"
+".\objects\startup_armcm3.o"
+".\objects\system_armcm3.o"
+--strict --scatter ".\Objects\MYRTT.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\MYRTT.map" -o .\Objects\MYRTT.axf
